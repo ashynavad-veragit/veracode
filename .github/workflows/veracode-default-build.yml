@@ -81,7 +81,7 @@ jobs:
           gem install veracode
           bundle install
         fi
-        veracode package --source . --output veracode-artifacts --trust
+        veracode package --source . --output veracode-artifacts --trust --debug
 
     - name: Package error
       if: failure() && steps.application_package.outcome == 'failure'
